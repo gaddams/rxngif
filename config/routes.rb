@@ -6,5 +6,8 @@ Rxngif::Application.routes.draw do
   #Create
   get("/new_picture_form", { :controller => "pictures", :action => "new" })
   get("/create_picture", { :controller => "pictures", :action => "create" })
+
+  #Destroy
+  get("/delete_picture/:id", { :controller => "pictures", :action => "destroy" })
   
 end

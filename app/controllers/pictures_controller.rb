@@ -16,5 +16,10 @@ class PicturesController < ApplicationController
   	redirect_to("http://localhost:3000/all_pictures")
   end
 
+  def destroy
+  	@pciture_destroy = Picture.find(params[:id])
+  	@pciture_destroy.destroy
+  	redirect_to("http://localhost:3000/all_pictures")
+  end
 
 end
